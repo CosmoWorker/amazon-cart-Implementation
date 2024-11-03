@@ -1,0 +1,374 @@
+body{
+    background-color: whitesmoke;
+}
+button{
+    cursor: pointer;
+}
+
+#overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+header{
+    display: flex;
+    background-color: rgba(8, 8, 28, 0.941);
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: fixed;
+    padding-left: 20px;
+    padding-right: 15px;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 11vh;
+}
+
+#name{
+    display: flex;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    align-items: baseline;
+    margin-bottom: 7px;
+}
+
+#cart-wrapper{
+    display: flex;
+    align-items: center;
+    margin-left: 50%;
+}
+
+#cart-icon-box img{
+    width: 70px;
+    margin-top: 5px;
+}
+
+#cart-icon-box{
+    position: relative;
+    display: inline-block;
+}
+
+#cart-count{
+    position: absolute;
+    background-color: #f07929;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 50%;
+    padding: 0px 6px;
+    right: 12px;
+    bottom: 24px;
+}
+
+#wishlist-btn-box{
+    margin-top: 11vh;
+    border-right: 2px solid rgb(208, 206, 206);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 17%;
+    min-height: 100vh;
+}
+
+#wishlist-btn-box button{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    font-size: 1.7rem;
+    margin: 15px;
+    border: none;
+    background-color: rgb(231, 228, 228);
+    padding-top: 8px;
+    border-radius: 5px;
+    padding-right: 12%;
+}
+
+#wishlist-btn-box p{
+    font-size: 0.9rem;
+    color: rgb(113, 113, 113);
+    margin-bottom: 7px;
+    margin-top: 1px;
+    margin-right: 50%;
+}
+
+#wishlist-page{
+    margin-top: 11vh;
+    margin-left: 17%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-size: large;
+}
+
+#wishlist-page h2{
+    margin-bottom: 0px;
+    margin-left: 10px;
+}
+
+#wishlist-page p{
+    color: rgb(113, 113, 113);
+    font-size: 0.9rem;
+    margin-left: 10px;
+    margin-top: 0px;
+    padding-left: 1px;
+}
+
+#wishlist-page img{
+    width: 30px;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+#wishlist-page input{
+    background-color: transparent;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0.5px 0.5px 1px 1px rgb(123, 123, 123);
+    height: 35px;
+    padding-left: 30px;
+    font-size: small;
+}
+
+#search{
+    position: absolute;
+    right: 228px;
+    top: 160px;
+    height: 25px;
+}
+
+#search-inp-grid{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5%;
+}
+
+#wishlist-items{
+    width: 83%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 17%;
+    padding: 7px;
+}
+
+#wishlist-item img{
+    width: 80%;
+    height: 170px;
+    margin-bottom: 10px;
+    align-self: center;
+}
+
+#wishlist-item{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+    width: 260px;
+    height: 470px;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+}
+
+#wishlist-item button{
+    width: 95%;
+    height: 30px;
+    border-radius: 5px;
+    background-color: rgb(255, 205, 6);
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    align-self: center;
+}
+
+#wishlist-price{
+    margin-top: 0px;
+}
+
+#cart-sum-box{
+    display: flex;
+    margin-top: 8%;
+    margin-left: 17%;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#order-summary{
+    border: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 7px;
+    padding: 15px;
+}
+#summary-head{
+    margin-top: 15px;
+    margin-bottom: 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: x-large;
+}
+#order-summary button{
+    align-self: center;
+    width: 85%;
+    height: 40px;
+    background-color: rgb(247, 198, 4);
+    border-radius: 2px;
+    border: none;
+    margin-top: 8px;
+    font-size: 1.05rem;
+}
+#items, #order-total{
+    display: flex;
+    justify-content: space-between;
+}
+#order-total{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#items{
+    font-size: large;
+    border-bottom: 1px solid lightgray;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#shopping-cart{
+    border: none;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+    width: 68%;
+    margin-left: 10px;
+    border-radius: 7px;
+    padding: 20px;
+    padding-top: 10px; 
+}
+
+#shopping-cart h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+#added-item{
+    display: flex;
+    border-bottom: 2px solid lightgray;
+    align-items: center;
+    padding: 10px 0;
+}
+
+#added-item-info{
+    margin-left: 10px;
+    flex: 1;
+}
+#added-item-info h3{
+    margin-bottom: 0px;
+}
+
+#cart-price{
+    font-size: larger;
+    font-weight: bold;
+    white-space: nowrap;
+}
+#stock{
+    color: rgb(2, 162, 2);
+    margin-bottom: 0px;
+    margin-top: 7px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#added-item img{
+    width: 120px;
+    height: 120px;
+}
+
+#add-delete-box{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+#add, #minus{
+    height: 25px;
+    width: 25px;
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    border-radius: 4px;
+    border: 1px solid black;
+}
+
+#minus{
+    padding-bottom: 22px;
+}
+#delete{
+    border: none;
+    color: rgb(37, 37, 255);
+    font-size: medium;
+    background-color: transparent;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#purchase-success-box{
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    padding-top: 5px;
+    width: 24%;
+    background-color: white;
+
+}
+#purchase-success-box h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+#purchase-success-box p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 500;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+#success-amount{
+    display: flex;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#purchase-success-box img{
+    width: 50px;
+    height: 50px;
+}
+
+#purchase-success-box button{
+    background-color: rgb(34, 92, 253);
+    color: white;
+    border: none;
+    width: 90%;
+    height: 35px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: large;
+    border-radius: 1px;
+    margin-bottom: 10px;
+}
+
+#cart-empty{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+    margin-left: 36%;
+    padding: 10px;
+    text-align: center;
+    background-color: transparent;
+    width: 25%;
+}
